@@ -1,0 +1,10 @@
+projeto_um:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: ogum-445823
+      dataset: "{{ env_var('DBT_DBNAME', 'dbt_dw_raw') }}"
+      threads: 4
+      keyfile: /home/joao/repos/ogum-445823-ed22ca07ee94.json
